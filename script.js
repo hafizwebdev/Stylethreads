@@ -131,3 +131,44 @@ const firebaseConfig = {
 
 // Firebase start
 firebase.initializeApp(firebaseConfig);
+const firebaseConfig = {
+  apiKey: "AIzaSyDf0SHUjNRG4MnukUHJ1UjVvcwojLZ4s",
+  authDomain: "hafizdev-19721.firebaseapp.com",
+  projectId: "hafizdev-19721",
+  storageBucket: "hafizdev-19721.firebasestorage.app",
+  messagingSenderId: "361334176435",
+  appId: "1:361334176435:web:d092ede716be006bc78ec6",
+  measurementId: "G-R45Q5SS2LL"
+};
+
+// Firebase start
+firebase.initializeApp(firebaseConfig);
+
+// Auth system
+const auth = firebase.auth();
+
+function signup() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(() => {
+      document.getElementById("msg").innerText = "Account created 👍";
+    })
+    .catch(err => {
+      document.getElementById("msg").innerText = err.message;
+    });
+}
+
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      document.getElementById("msg").innerText = "Login success 🔥";
+    })
+    .catch(err => {
+      document.getElementById("msg").innerText = err.message;
+    });
+}
