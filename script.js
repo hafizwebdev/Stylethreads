@@ -119,3 +119,15 @@ function loadData() {
 
 window.addEventListener("beforeunload", saveData);
 window.addEventListener("load", loadData);
+const firebaseConfig = {
+  apiKey: "AIzaSyDf0SHUjNRG4MnukUHJ1UjVvcwojLZ4s",
+  authDomain: "hafizdev-19721.firebaseapp.com",
+  projectId: "hafizdev-19721",
+  storageBucket: "hafizdev-19721.firebasestorage.app",
+  messagingSenderId: "361334176435",
+  appId: "1:361334176435:web:d092ede716be006bc78ec6",
+  measurementId: "G-R45Q5SS2LL"
+};
+
+// Firebase start
+firebase.initializeApp(firebaseConfig);
