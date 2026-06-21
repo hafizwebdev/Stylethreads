@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Threads</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<h1>👕 Style Threads</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Profile</a>
+<a href="#">Orders</a>
+
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</nav>
+</header>
+
+<!-- AUTH SECTION -->
+<section class="login-box">
+
+<h2>Login / Signup</h2>
+
+<input type="text" id="username" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+<button onclick="signup()">Sign Up</button>
+<button onclick="logout()">Logout</button>
+
+<p id="userStatus"></p>
+
+</section>
+
+<!-- TOP BAR -->
+<section class="top-bar">
+
+<input type="text" id="search" placeholder="Search Products..." onkeyup="searchProduct()">
+
+<div class="counts">
+<p>🛒 Cart: <span id="cart">0</span></p>
+<p>❤️ Wishlist: <span id="wishlist">0</span></p>
+</div>
+
+</section>
+<!-- PRODUCTS -->
+<section id="products">
+
+<div class="product" id="product1">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300">
+<h3>Black T-Shirt</h3>
+<p class="price">Rs.1500</p>
+<button onclick="buyNow()">Buy Now</button>
+<button onclick="addWishlist()">❤️ Wishlist</button>
+</div>
+
+<div class="product" id="product2">
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300">
+<h3>Blue Jeans</h3>
+<p class="price">Rs.2500</p>
+<button onclick="buyNow()">Buy Now</button>
+<button onclick="addWishlist()">❤️ Wishlist</button>
+</div>
+
+<div class="product" id="product3">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723?w=300">
+<h3>White Shirt</h3>
+<p class="price">Rs.1800</p>
+<button onclick="buyNow()">Buy Now</button>
+<button onclick="addWishlist()">❤️ Wishlist</button>
+</div>
+
+<div class="product" id="product4">
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=300">
+<h3>White Sneakers</h3>
+<p class="price">Rs.4500</p>
+<button onclick="buyNow()">Buy Now</button>
+<button onclick="addWishlist()">❤️ Wishlist</button>
+</div>
+
+</section>
+
+<section id="checkout">
+<h2>🛍 Checkout</h2>
+<p>Total Items: <span id="totalItems">0</span></p>
+<button onclick="checkout()">Proceed to Checkout</button>
+</section>
+<section id="payment">
+<h2>💳 Payment</h2>
+
+<input type="text" id="cardName" placeholder="Card Holder Name">
+<input type="text" id="cardNumber" placeholder="Card Number">
+<input type="password" id="cvv" placeholder="CVV">
+
+<button onclick="payNow()">Pay Now</button>
+</section>
+
+<section id="profile">
+<h2>👤 User Profile</h2>
+
+<p>Name: Admin</p>
+<p>Email: admin@stylethreads.com</p>
+<p>Member: Premium</p>
+</section>
+
+<footer>
+<p>© 2026 Style Threads | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
